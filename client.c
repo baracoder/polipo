@@ -740,7 +740,7 @@ httpClientRequest(HTTPRequestPtr request, AtomPtr url)
     if(body_len < 0) {
         if(request->method == METHOD_GET || request->method == METHOD_HEAD ||
            request->method == METHOD_POST || request->method == METHOD_OPTIONS ||
-           request->method == METHOD_DELETE)
+           request->method == METHOD_DELETE || request->method == METHOD_CONNECT)
             body_len = 0;
     }
     connection->bodylen = body_len;
